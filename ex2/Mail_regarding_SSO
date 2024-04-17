@@ -1,0 +1,42 @@
+
+Hello,
+
+Thank you for reaching out to us regarding your Okta SSO integration. We're glad to assist you in configuring it with our platform.
+We offer integrations with several Single Sign-On (SSO) providers to facilitate seamless authentication processes for our users.
+Among these, Okta stands as one of our supported SSO providers.
+In order to proceed with the configuration on our end, we kindly ask you to provide us with Okta Domain and Client ID.
+
+Firstly, please make sure you have created an Okta integrations. If not, go to Applications -> Applications and then click on "Create App Integration".
+Choose the "OIDC - OpenID Connect" option and "Single-Page application".
+After that, you will need to configure the integrations. So choose an app integration name and an application logo you desire.
+Under Grant type mark all options and under Sign-in redirect URIs set: https://auth.getport.io/login/callback.
+Remove the sign-out redirect URIs and under Assignments -> controlled access: Set Allow everyone in your organization to access.
+
+After that, you'll need to configure OIDC settings. 
+Get your Okta Domain by clicking on your user mail at the top-right corner of the Okta management interface,
+hovering on the okta domain (will be in the format {YOUR_COMPANY_NAME}.okta.com) and clicking on Copy to clipboard.
+Then, Under General tab, Copy the Client ID and send it to Port along with the Okta Domain from the previous step (on the slack channel/Intercom).
+After that, click on edit and set the Login initiated by option to either Okta or App and mark all under Application visibility.
+Check Login flow to be Redirect to app to initiate login (OIDC Compliant) and under initiate login URI paste:
+"https://auth.getport.io/authorize?response_type=token&client_id=96IeqL36Q0UIBxIfV1oqOkDWU6UslfDj&connection={CONNECTION_NAME}&redirect_uri=https%3A%2F%2Fapp.getport.io".
+After that, don't forget to click save.
+Lastly, we'll need to allow pulling Okta groups to Port. 
+Under OpenID Connect Token click Edit, then add a Groups claim type and choose the option filter and select Matches regex.* in Groups claim filter.
+
+Once we receive the requierd information, we'll be able to assist you further in configuring the integration.
+If you encounter any difficulties or have any questions, feel free to refer to our documentation at 
+"https://docs.getport.io/sso-rbac/sso-providers/okta/#step-2-configure-your-okta-application"
+or schedule a call with us.
+
+Best,
+Support team.
+
+
+
+
+
+
+Resource I used:
+1. https://docs.getport.io/sso-rbac/sso-providers/okta/#step-2-configure-your-okta-application
+2. google.com
+
