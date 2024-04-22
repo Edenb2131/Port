@@ -1,0 +1,18 @@
+Hello,
+
+Let me offer a solution to “IN PROGRESS” status indefinitely showing on the self-service on Port.
+
+First, check GitHub Workflow Configuration. Please make sure you configured the .yml correctly and with the right triggers and conditions.
+Are there any specific events or conditions that need to be met for the workflow to run?
+
+Secondly, please verify Port integration settings to GitHub is correctly configured. Did you allow the appropriate permissions and scopes to trigger workflows?
+
+Lastly, in the self-service action, Are all the required fields filled out correctly, such as the repository name, workflow file path, and trigger conditions?
+it might be a good idea to check again.
+
+After all of it, if you still strugling with that, you can check our doucumntaion here: "https://docs.getport.io/create-self-service-experiences/"
+And also, send us a Slack message.
+
+
+Best,
+Support team.
